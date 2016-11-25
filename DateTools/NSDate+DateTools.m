@@ -1641,7 +1641,7 @@ static NSCalendar *implicitCalendar = nil;
  *  @return NSString representing the formatted date string
  */
 -(NSString *)formattedDateWithFormat:(NSString *)format{
-    return [self formattedDateWithFormat:format timeZone:[NSTimeZone systemTimeZone] locale:[NSLocale autoupdatingCurrentLocale]];
+    return [self formattedDateWithFormat:format timeZone:[NSTimeZone systemTimeZone] locale:[NSLocale localeWithLocaleIdentifier: @"en_US_POSIX"]];
 }
 
 /**
@@ -1653,7 +1653,7 @@ static NSCalendar *implicitCalendar = nil;
  *  @return NSString representing the formatted date string
  */
 -(NSString *)formattedDateWithFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone{
-    return [self formattedDateWithFormat:format timeZone:timeZone locale:[NSLocale autoupdatingCurrentLocale]];
+    return [self formattedDateWithFormat:format timeZone:timeZone locale:[NSLocale localeWithLocaleIdentifier: @"en_US_POSIX"]];
 }
 
 /**
